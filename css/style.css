@@ -1,0 +1,16 @@
+.header {
+  background-image: url("../img/wall.png");
+  background-size: cover;
+  background-position: center;
+}
+body {
+  background-image: url("../img/cork.png");
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  line-height: 100px;
+}
+.card > img {
+  padding: 10px;
+}
