@@ -25,7 +25,7 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
    
             <img src="${post.url}" class="card-img-top" alt="${post.title}" 
             />
-           <!-- SVG sopra l'immagine -->
+          
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" 
          style="position: absolute; top: -10px; left: 190px;">
       <g filter="url(#filter0_d_11_3)">
