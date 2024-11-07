@@ -10,9 +10,6 @@
 </div> */
 
 // DATI
-const postRowOne = document.getElementById("row");
-const postRowTwo = document.getElementById("row-2");
-
 const postRow = document.getElementById("row");
 
 fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
