@@ -1,3 +1,9 @@
+.edu-tas-beginner {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 .header {
   background-image: url("../img/wall.png");
   background-size: cover;
@@ -30,4 +36,11 @@ h1 {
 }
 .card {
   cursor: pointer;
+  width: 90%;
+  position: relative;
+}
+#overlayImage {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
 }

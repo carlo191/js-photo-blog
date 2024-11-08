@@ -13,7 +13,6 @@
 const postRow = document.getElementById("row");
 const layoverEl = document.getElementById(`layover`);
 const buttonCloseEl = document.querySelector(`.btn.btn-primary`);
-let card;
 //
 
 // EVENT LISTENER
@@ -31,7 +30,7 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
       postRow.innerHTML += `
         <div class="col-md-4 mb-4">
         
-          <div class="card cursor-pointer" style="width: 90%; postion:relative">
+          <div class="card cursor-pointer" >
    
             <img src="${post.url}" class="card-img-top" alt="${post.title}" 
             />
@@ -72,10 +71,11 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
           </div>
         </div>`;
       card = document.querySelectorAll(`.card`);
-      console.log(card);
     });
-    card.forEach((el) => {
+    card.forEach((el, index) => {
       el.addEventListener(`click`, () => {
+        overlayImage.src = posts[index].url;
+
         layoverEl.classList.remove(`d-none`);
       });
     });
