@@ -13,10 +13,15 @@
 const postRow = document.getElementById("row");
 const layoverEl = document.getElementById(`layover`);
 const buttonCloseEl = document.querySelector(`.btn.btn-primary`);
+let card;
 //
+
+// EVENT LISTENER
 buttonCloseEl.addEventListener(`click`, () => {
   layoverEl.classList.add(`d-none`);
 });
+
+//
 fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
   .then((resp) => resp.json())
   .then((posts) => {
@@ -66,5 +71,12 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
             </div>
           </div>
         </div>`;
+      card = document.querySelectorAll(`.card`);
+      console.log(card);
+    });
+    card.forEach((el) => {
+      el.addEventListener(`click`, () => {
+        layoverEl.classList.remove(`d-none`);
+      });
     });
   });
